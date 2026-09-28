@@ -3,113 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia del Rock: Måneskin & KISS</title>
-    <!-- Espacio para la hoja de estilos CSS externas -->
+    <meta name="author" content="Estudiante de IV Bachillerato">
+    <meta name="description" content="Proyecto Final de Computación: Análisis Histórico e Impacto Cultural de Måneskin y KISS">
+    <title>Evaluación de Rock: Måneskin & KISS | IV Bachillerato</title>
+    <!-- Vinculación con la hoja de estilos externa -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <!-- Encabezado principal del sitio -->
-    <header>
-        <h1>Gigantes del Rock: Måneskin & KISS</h1>
-        <p>Un viaje desde el glam rock de los 70 hasta la revolución del rock moderno.</p>
-        <nav>
+    <!-- Encabezado Principal y Datos del Examen -->
+    <header class="header-principal">
+        <div class="banner-examen">
+            <span class="badge-curso">Evaluación Práctica de Desarrollo Web</span>
+            <span class="badge-grado">IV Bachillerato en Ciencias y Letras</span>
+        </div>
+        <h1>Leyendas del Rock: Måneskin & KISS</h1>
+        <p class="subtitulo">Estudio comparativo sobre el origen, impacto cultural y legado del Glam Rock y el Rock Moderno</p>
+        
+        <!-- Ficha de identificación del estudiante -->
+        <div class="ficha-estudiante">
+            <p><strong>Alumno:</strong> [Tu Nombre Aquí]</p>
+            <p><strong>Cátedra:</strong> Computación / Diseño Web</p>
+            <p><strong>Fecha de entrega:</strong> [Fecha]</p>
+        </div>
+
+        <!-- Menú de Navegación Interna -->
+        <nav class="menu-navegacion">
             <ul>
+                <li><a href="#introduccion">Introducción</a></li>
                 <li><a href="#maneskin">Måneskin</a></li>
                 <li><a href="#kiss">KISS</a></li>
+                <li><a href="#comparativa">Análisis Comparativo</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="contenedor-principal">
+
+        <!-- INTRODUCCIÓN GENERAL -->
+        <section id="introduccion" class="bloque-introduccion">
+            <h2>Introducción al Proyecto</h2>
+            <p>
+                El rock ha sido un motor de transformación cultural desde mediados del siglo XX. A través de esta evaluación web, se examina la trayectoria de dos agrupaciones pertenecientes a distintas eras pero unidas por una filosofía estética y musical compartida: <strong>KISS</strong>, los pioneros del espectáculo teatral en los años 70, y <strong>Måneskin</strong>, el fenómeno italiano que ha revitalizado el género para la Generación Z en la década de 2020.
+            </p>
+        </section>
+
         <!-- SECCIÓN 1: MÅNESKIN -->
-        <article id="maneskin">
-            <h2>Måneskin</h2>
+        <article id="maneskin" class="tarjeta-banda">
+            <header class="encabezado-banda">
+                <span class="categoria-genero">Rock Moderno / Hard Rock / Post-Punk</span>
+                <h2>Måneskin</h2>
+                <p class="lema-banda">"Il ballo della vita" — La nueva ola del rock italiano para el mundo</p>
+            </header>
             
-            <figure>
-                <img src="https://via.placeholder.com/800x400" alt="Integrantes de la banda Måneskin en el escenario">
-                <figcaption>Måneskin: Damiano David, Victoria De Angelis, Thomas Raggi y Ethan Torchio.</figcaption>
+            <figure class="galeria-imagen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXNBmHrsppmvtPT2F3rmFgLSBSA1JhpfxYgLS9mefQoYEhEW2zTELY2Ghf&s=10" alt="Måneskin interpretando en vivo en un escenario internacional">
+                <figcaption>Alineación actual: Damiano David (Voz), Victoria De Angelis (Bajo), Thomas Raggi (Guitarra) y Ethan Torchio (Batería).</figcaption>
             </figure>
 
-            <section>
-                <h3>Nacimiento de la Banda</h3>
+            <section class="detalle-seccion">
+                <h3>1. Origen y Formación (2016)</h3>
                 <p>
-                    Måneskin se formó en Roma, Italia, en el año 2016. La bajista Victoria De Angelis y el guitarrista Thomas Raggi se conocían de la escuela secundaria y decidieron crear una banda. Más tarde se les unió el vocalista Damiano David y, a través de un anuncio en Facebook, completaron la alineación con el baterista Ethan Torchio. El nombre "Måneskin" significa "Luz de la luna" en danés, sugerido por Victoria, quien tiene ascendencia danesa.
+                    El proyecto nació en las aulas de la escuela secundaria en Roma, Italia, cuando la bajista <strong>Victoria De Angelis</strong> y el guitarrista <strong>Thomas Raggi</strong> decidieron unir influencias musicales. Posteriormente se sumó el vocalista <strong>Damiano David</strong> y, mediante una convocatoria abierta en redes sociales, el baterista <strong>Ethan Torchio</strong> completó el cuarteto.
+                </p>
+                <p>
+                    El nombre <em>Måneskin</em> es una palabra en danés que significa "Luz de la luna", elegida a sugerencia de Victoria (de ascendencia danesa) cuando la banda necesitaba un nombre para inscribirse en un concurso local de música. Sus primeras presentaciones no fueron en grandes recintos, sino en las aceras del distrito histórico de Roma, donde pulieron su presencia escénica e interacción con el público.
                 </p>
             </section>
 
-            <section>
-                <h3>Historia Pasada y Trayectoria</h3>
+            <section class="detalle-seccion">
+                <h3>2. Evolución Histórica y Despegue Masivo</h3>
                 <p>
-                    La banda comenzó tocando en las calles de Roma antes de dar el salto a la televisión nacional en 2017 al participar en la versión italiana de <em>The X Factor</em>, donde obtuvieron el segundo lugar. Este impulso los llevó a lanzar su primer álbum de estudio, <em>Il ballo della vita</em> (2018), que fue un gran éxito en Italia.
+                    En 2017, la banda alcanzó notoriedad nacional tras quedar en segundo lugar en la versión italiana del programa <em>The X Factor</em>. Este logro impulsó el lanzamiento de su álbum debut, <em>Il ballo della vita</em> (2018), que debutó en el número uno de las listas italianas y dio inicio a su primera gira europea.
+                </p>
+                <p>
+                    El verdadero hito histórico ocurrió en 2021: tras ganar el prestigioso <strong>Festival de San Remo</strong> con el tema hard rock <em>"Zitti e buoni"</em>, representaron a Italia en el <strong>Festival de la Canción de Eurovisión 2021</strong>, obteniendo la victoria definitiva. Este triunfo rompió el paradigma de que Eurovisión solo premiaba música pop, desencadenando un fenómeno global que llevó a la banda a encabezar festivales como Coachella, Lollapalooza y Rock in Rio.
                 </p>
             </section>
 
-            <section>
-                <h3>Actualidad y Éxito Internacional</h3>
-                <p>
-                    El gran salto internacional de Måneskin ocurrió en 2021 cuando ganaron el prestigioso Festival de la Canción de Eurovisión con el tema "Zitti e buoni". A partir de ese momento, revivieron el interés masivo por el rock en las nuevas generaciones, encabezando festivales globales y colaborando con leyendas de la música como Iggy Pop.
-                </p>
-            </section>
-
-            <section>
-                <h3>Canciones Destacadas</h3>
-                <ul>
-                    <li><strong>Zitti e buoni:</strong> La canción que los catapultó a la fama mundial.</li>
-                    <li><strong>Beggin':</strong> Cover del clásico de The Four Seasons que se volvió viral a nivel global.</li>
-                    <li><strong>I WANNA BE YOUR SLAVE:</strong> Uno de sus sencillos más populares de rock moderno.</li>
-                    <li><strong>THE LONELIEST:</strong> Una balada rock que demuestra la versatilidad de la voz de Damiano.</li>
-                </ul>
+            <section class="detalle-seccion">
+                <h3>3. Discografía y Canciones Emblemáticas</h3>
+                <div class="tabla-contenedor">
+                    <table class="tabla-canciones">
+                        <thead>
+                            <tr>
+                                <th>Canción</th>
+                                <th>Álbum / Año</th>
+                                <th>Impacto y Descripción Musical</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Zitti e buoni</strong></td>
+                                <td>Teatro d'ira: Vol. I (2021)</td>
+                                <td>Sencillo ganador de Eurovisión; caracterizado por riffs pesados de guitarra y una lírica de rebeldía juvenil.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Beggin'</strong></td>
+                                <td>Chosen EP (2017)</td>
+                                <td>Reinterpretación del clásico de 1967 de The Four Seasons; acumula miles de millones de reproducciones en plataformas digitales.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>I WANNA BE YOUR SLAVE</strong></td>
+                                <td>Teatro d'ira: Vol. I (2021)</td>
+                                <td>Exploración de la dualidad humana con un ritmo post-punk; contó con un remix oficial junto a la leyenda del punk Iggy Pop.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>THE LONELIEST</strong></td>
+                                <td>RUSH! (2023)</td>
+                                <td>Power ballad emocional que muestra el alcance vocal de Damiano y un solo de guitarra de corte clásico por Thomas Raggi.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </article>
 
-        <hr>
+        <hr class="separador-seccion">
 
         <!-- SECCIÓN 2: KISS -->
-        <article id="kiss">
-            <h2>KISS</h2>
+        <article id="kiss" class="tarjeta-banda">
+            <header class="encabezado-banda">
+                <span class="categoria-genero">Shock Rock / Heavy Metal / Glam Rock</span>
+                <h2>KISS</h2>
+                <p class="lema-banda">"You Wanted the Best, You Got the Best" — Los reyes del espectáculo teatral</p>
+            </header>
 
-            <figure>
-                <img src="https://via.placeholder.com/800x400" alt="La banda KISS con sus característicos maquillajes y trajes">
-                <figcaption>KISS: The Starchild, The Demon, The Spaceman y The Catman.</figcaption>
+            <figure class="galeria-imagen">
+                <img src="https://blog.ticketmaster.es/wp-content/uploads/2021/06/maneskin.jpg" alt="Integrantes de KISS con maquillaje icónico e instrumentos en directo">
+                <figcaption>Alineación legendaria: The Starchild (Paul Stanley), The Demon (Gene Simmons), The Spaceman (Ace Frehley) y The Catman (Peter Criss).</figcaption>
             </figure>
 
-            <section>
-                <h3>Nacimiento de la Banda</h3>
+            <section class="detalle-seccion">
+                <h3>1. Origen y Creación del Concepto (1973)</h3>
                 <p>
-                    KISS se formó en la ciudad de Nueva York en enero de 1973. Sus fundadores fueron Paul Stanley (guitarra y voz) y Gene Simmons (bajo y voz), quienes venían de una agrupación anterior llamada Wicked Lester. Se unieron al baterista Peter Criss y al guitarrista Ace Frehley para completar la alineación original. La banda destacó de inmediato por sus icónicos maquillajes faciales y trajes extravagantes.
+                    KISS surgió en Nueva York en enero de 1973 a partir de las cenizas de <em>Wicked Lester</em>, agrupación liderada por <strong>Paul Stanley</strong> (guitarra/voz) y <strong>Gene Simmons</strong> (bajo/voz). Con la incorporación del baterista <strong>Peter Criss</strong> y el guitarrista principal <strong>Ace Frehley</strong>, el grupo tomó la decisión de diferenciarse de cualquier otra banda de la época combinando el hard rock pesado con una estética inspirada en el cómic y el teatro de terror.
+                </p>
+                <p>
+                    Cada miembro adoptó un personaje con su propio maquillaje facial distintivo: Stanley como <em>The Starchild</em>, Simmons como <em>The Demon</em>, Frehley como <em>The Spaceman</em> y Criss como <em>The Catman</em>. Esta identidad visual les permitió trascender la música y convertirse en un fenómeno de mercadotecnia sin precedentes.
                 </p>
             </section>
 
-            <section>
-                <h3>Historia Pasada y Era de Oro</h3>
+            <section class="detalle-seccion">
+                <h3>2. Era Dorada, Legado y Retiro Escénico</h3>
                 <p>
-                    Durante la década de 1970, KISS transformó los conciertos de rock en espectáculos teatrales masivos con pirotecnia, fuego, sangre falsa y guitarras humeantes. Álbumes como <em>Destroyer</em> (1976) y su disco en vivo <em>Alive!</em> los consolidaron como una de las bandas más grandes del planeta, además de crear la "KISS Army", uno de los clubes de fans más grandes de la historia.
+                    Aunque sus primeros discos de estudio tuvieron ventas moderadas, el lanzamiento del álbum en vivo <strong>Alive! (1975)</strong> revolucionó la industria discográfica, capturando la energía pirotécnica de sus conciertos. Durante la segunda mitad de los años 70, produjeron clásicos indiscutibles como <em>Destroyer (1976)</em> y consolidaron a la <strong>KISS Army</strong>, uno de los clubes de fans más organizados del planeta.
+                </p>
+                <p>
+                    A lo largo de cinco décadas, la banda superó cambios de alineación, periodos sin maquillaje en los años 80 y giras mundiales multitudinarias. En diciembre de 2023, KISS ofreció su último concierto presencial en el Madison Square Garden de Nueva York como parte del <em>End of the Road World Tour</em>, anunciando el inicio de una nueva era mediante avatares virtuales desarrollados por tecnología de captura de movimiento.
                 </p>
             </section>
 
-            <section>
-                <h3>Historia Actual y Retiro</h3>
-                <p>
-                    Tras más de 50 años de carrera, múltiples cambios de alineación y miles de conciertos, KISS realizó su gira de despedida mundial titulada <em>End of the Road World Tour</em>, la cual concluyó en diciembre de 2023 en el Madison Square Garden de Nueva York. Actualmente, la banda planea continuar su legado a través de avatares digitales y proyectos de entretenimiento.
-                </p>
-            </section>
-
-            <section>
-                <h3>Canciones Destacadas</h3>
-                <ul>
-                    <li><strong>Rock and Roll All Nite:</strong> Considerado el himno definitivo de la banda.</li>
-                    <li><strong>I Was Made for Lovin' You:</strong> Una famosa fusión entre rock y música disco.</li>
-                    <li><strong>Detroit Rock City:</strong> Un clásico del hard rock con potentes riffs de guitarra.</li>
-                    <li><strong>Love Gun:</strong> Una de las canciones más emblemáticas interpretada por Paul Stanley.</li>
-                </ul>
+            <section class="detalle-seccion">
+                <h3>3. Discografía y Canciones Emblemáticas</h3>
+                <div class="tabla-contenedor">
+                    <table class="tabla-canciones">
+                        <thead>
+                            <tr>
+                                <th>Canción</th>
+                                <th>Álbum / Año</th>
+                                <th>Impacto y Descripción Musical</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rock and Roll All Nite</strong></td>
+                                <td>Dressed to Kill (1975)</td>
+                                <td>Considerado el himno definitivo del rock; compuesto intencionalmente como una declaración de fiesta constante.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>I Was Made for Lovin' You</strong></td>
+                                <td>Dynasty (1979)</td>
+                                <td>Pionera en la fusión entre el hard rock y los ritmos de la música disco; un éxito comercial masivo a nivel mundial.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Detroit Rock City</strong></td>
+                                <td>Destroyer (1976)</td>
+                                <td>Obra maestra del género con ricas líneas de guitarra duales y un trabajo lírico narrativo sobre la cultura del rock.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Love Gun</strong></td>
+                                <td>Love Gun (1977)</td>
+                                <td>Una de las composiciones más representativas de Paul Stanley, presente en casi la totalidad de sus giras en vivo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </article>
+
+        <!-- SECCIÓN COMPARATIVA Y CONCLUSIÓN -->
+        <section id="comparativa" class="bloque-comparativo">
+            <h2>Análisis Comparativo e Impacto Cultural</h2>
+            <p>
+                A pesar de estar separadas por casi medio siglo de diferencia, Måneskin y KISS comparten elementos fundamentales que justifican su estudio paralelo:
+            </p>
+            <ul class="lista-analisis">
+                <li><strong>Estética e Identidad Visual:</strong> Ambas bandas entienden que el rock no es solo sonido, sino una experiencia visual. Mientras KISS apostó por el maquillaje y la androginia de los 70, Måneskin utiliza la moda alta costura y el estilo glam-punk contemporáneo.</li>
+                <li><strong>Energía en Directo:</strong> La reputación de ambas agrupaciones se consolidó gracias a la fuerza de sus presentaciones en vivo antes de sus grandes éxitos de estudio.</li>
+                <li><strong>Preservación del Género:</strong> KISS mantuvo el rock en estadios durante las crisis de la música disco y el synth-pop; Måneskin ha devuelto el formato de banda con guitarras a las listas dominadas por el streaming y la música urbana.</li>
+            </ul>
+        </section>
+
     </main>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; Documental Web sobre Måneskin y KISS. Todos los derechos reservados.</p>
+    <!-- Pie de página con formato de entrega escolar -->
+    <footer class="footer-examen">
+        <div class="info-footer">
+            <p><strong>Proyecto Evaluativo:</strong> Desarrollo de Sitios Web con HTML5 y CSS3</p>
+            <p><strong>Instituto / Colegio:</strong> [Nombre de tu Colegio]</p>
+            <p>&copy; 2026 — Todos los derechos reservados con fines educativos.</p>
+        </div>
     </footer>
 
 </body>
