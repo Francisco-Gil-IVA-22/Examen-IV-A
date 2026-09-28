@@ -1,189 +1,387 @@
-/* Variables de Color y Tipografía */
+/* ==========================================================================
+   HOJA DE ESTILOS: estilos.css
+   Materia: Computación / Desarrollo Web
+   Nivel: IV Bachillerato en Ciencias y Letras
+   Proyecto: Leyendas del Rock (Måneskin & KISS)
+   ========================================================================== */
+
+/* 1. VARIABLES GLOBALES Y TIPOGRAFÍA */
 :root {
-    --color-carmin: #900C3F;
-    --color-carmin-brillante: #C70039;
-    --color-negro: #111111;
-    --color-negro-suave: #1A1A1A;
-    --color-blanco: #FFFFFF;
-    --color-gris-claro: #F4F4F4;
-    --color-gris-texto: #DDDDDD;
-    --fuente-titulo: 'Impact', 'Arial Black', sans-serif;
-    --fuente-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --carmin-principal: #800020;
+    --carmin-brillante: #C70039;
+    --carmin-neon: #FF1E56;
+    --negro-fondo: #0D0D0D;
+    --negro-tarjeta: #161616;
+    --negro-hover: #222222;
+    --blanco-puro: #FFFFFF;
+    --gris-texto: #CCCCCC;
+    --gris-borde: #2A2A2A;
+    
+    --fuente-titulos: 'Impact', 'Trebuchet MS', sans-serif;
+    --fuente-cuerpo: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* Reset Básico y Proporciones Globales */
+/* 2. RESET Y ESTILOS BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: var(--color-negro);
-    color: var(--color-gris-texto);
-    font-family: var(--fuente-texto);
-    line-height: 1.6;
+    background-color: var(--negro-fondo);
+    color: var(--gris-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.7;
     font-size: 16px;
-    padding: 20px 0;
+    background-image: radial-gradient(circle at 50% 0%, rgba(128, 0, 32, 0.25) 0%, transparent 75%);
+    background-attachment: fixed;
 }
 
-/* Encabezado Principal */
-header {
-    background-color: var(--color-negro-suave);
-    border-bottom: 4px solid var(--color-carmin);
-    border-top: 4px solid var(--color-carmin);
-    max-width: 1000px;
-    margin: 0 auto 30px auto;
-    padding: 30px 20px;
+/* 3. ENCABEZADO Y FICHA DE ACADEMIA */
+.header-principal {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 40px 30px;
+    background: linear-gradient(145deg, #181818, #0F0F0F);
+    border: 1px solid var(--gris-borde);
+    border-top: 5px solid var(--carmin-brillante);
+    border-bottom: 5px solid var(--carmin-brillante);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(128, 0, 32, 0.2);
     text-align: center;
-    box-shadow: 0 4px 15px rgba(144, 12, 63, 0.3);
 }
 
-header h1 {
-    font-family: var(--fuente-titulo);
-    font-size: 2.8rem;
-    color: var(--color-blanco);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 0px var(--color-carmin);
-}
-
-header p {
-    color: var(--color-gris-texto);
-    font-size: 1.1rem;
-    font-style: italic;
+.banner-examen {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-/* Menú de Navegación */
-nav ul {
+.badge-curso, .badge-grado {
+    background-color: var(--carmin-principal);
+    color: var(--blanco-puro);
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+    border: 1px solid var(--carmin-neon);
+}
+
+.header-principal h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    color: var(--blanco-puro);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0px var(--carmin-principal), 0 0 15px rgba(199, 0, 57, 0.5);
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    color: var(--blanco-puro);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    opacity: 0.9;
+}
+
+.ficha-estudiante {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--carmin-principal);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.ficha-estudiante strong {
+    color: var(--carmin-brillante);
+}
+
+/* 4. NAVEGACIÓN COQUETA Y MODERNA */
+.menu-navegacion ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-nav a {
-    color: var(--color-blanco);
-    background-color: var(--color-carmin);
+.menu-navegacion a {
+    color: var(--blanco-puro);
     text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    background-color: var(--negro-tarjeta);
+    border: 1px solid var(--carmin-principal);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-block;
 }
 
-nav a:hover {
-    background-color: var(--color-carmin-brillante);
-    transform: translateY(-2px);
+.menu-navegacion a:hover {
+    background-color: var(--carmin-brillante);
+    box-shadow: 0 0 15px var(--carmin-neon);
+    transform: translateY(-3px);
 }
 
-/* Contenido Principal */
-main {
-    max-width: 1000px;
+/* 5. ESTRUCTURA PRINCIPAL Y TARJETAS */
+.contenedor-principal {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Contenedores de las Bandas (Artículos) */
-article {
-    background-color: var(--color-negro-suave);
-    border: 1px solid #333333;
-    border-left: 6px solid var(--color-carmin);
-    border-radius: 6px;
-    padding: 30px;
+.bloque-introduccion, .tarjeta-banda, .bloque-comparativo {
+    background-color: var(--negro-tarjeta);
+    border: 1px solid var(--gris-borde);
+    border-radius: 12px;
+    padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Títulos de Sección */
+.tarjeta-banda::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--carmin-neon), var(--carmin-principal));
+}
+
+/* Títulos de Secciones */
 h2 {
-    font-family: var(--fuente-titulo);
-    font-size: 2.2rem;
-    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 2.3rem;
+    color: var(--blanco-puro);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    border-bottom: 2px solid var(--color-carmin);
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: var(--carmin-brillante);
+    margin-top: 5px;
+}
+
+.encabezado-banda {
+    margin-bottom: 25px;
+}
+
+.categoria-genero {
+    color: var(--carmin-neon);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.lema-banda {
+    font-style: italic;
+    color: #999;
+    font-size: 1.05rem;
+}
+
+.detalle-seccion {
+    margin-top: 30px;
 }
 
 h3 {
     font-size: 1.3rem;
-    color: var(--color-carmin-brillante);
-    margin: 20px 0 10px 0;
+    color: var(--blanco-puro);
+    border-left: 3px solid var(--carmin-brillante);
+    padding-left: 12px;
+    margin-bottom: 15px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Párrafos */
 p {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    color: var(--gris-texto);
     text-align: justify;
 }
 
-/* Imágenes */
-figure {
-    margin: 25px 0;
-    text-align: center;
+p strong {
+    color: var(--blanco-puro);
 }
 
-figure img {
+/* 6. GALERÍA E IMÁGENES */
+.galeria-imagen {
+    margin: 30px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--carmin-principal);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.galeria-imagen img {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border: 3px solid var(--color-carmin);
-    border-radius: 4px;
-    filter: grayscale(20%) contrast(110%);
-    transition: filter 0.3s ease;
+    height: auto;
+    display: block;
+    filter: grayscale(30%) contrast(110%);
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-figure img:hover {
+.galeria-imagen:hover img {
     filter: grayscale(0%) contrast(100%);
+    transform: scale(1.03);
 }
 
 figcaption {
-    font-size: 0.9rem;
-    color: #888888;
-    margin-top: 8px;
-    font-style: italic;
-}
-
-/* Listas de Canciones */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-article ul li {
-    background-color: rgba(144, 12, 63, 0.1);
-    border-left: 3px solid var(--color-carmin);
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    border-radius: 0 4px 4px 0;
-}
-
-article ul li strong {
-    color: var(--color-blanco);
-}
-
-/* Separador */
-hr {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--color-carmin), transparent);
-    margin: 40px 0;
-}
-
-/* Pie de Página estilo examen/entrega escolar */
-footer {
-    max-width: 1000px;
-    margin: 40px auto 0 auto;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--color-negro-suave);
-    border-top: 2px solid var(--color-carmin);
+    background-color: rgba(13, 13, 13, 0.9);
+    color: var(--blanco-puro);
+    padding: 12px 15px;
     font-size: 0.85rem;
-    color: #777777;
+    text-align: center;
+    border-top: 1px solid var(--carmin-principal);
+}
+
+/* 7. TABLAS ESTILIZADAS (CANCIONES) */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-borde);
+}
+
+.tabla-canciones {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #121212;
+}
+
+.tabla-canciones th {
+    background-color: var(--carmin-principal);
+    color: var(--blanco-puro);
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabla-canciones td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--gris-borde);
+    font-size: 0.95rem;
+}
+
+.tabla-canciones tbody tr:hover {
+    background-color: rgba(199, 0, 57, 0.1);
+}
+
+.tabla-canciones td strong {
+    color: var(--carmin-brillante);
+}
+
+/* 8. SECCIÓN COMPARATIVA Y LISTA */
+.lista-analisis {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-analisis li {
+    background-color: #1a1a1a;
+    border: 1px solid var(--gris-borde);
+    border-left: 4px solid var(--carmin-brillante);
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.lista-analisis li:hover {
+    transform: translateX(5px);
+    background-color: #222222;
+}
+
+.lista-analisis strong {
+    color: var(--blanco-puro);
+}
+
+/* 9. SEPARADORES Y DETALLES */
+.separador-seccion {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--carmin-brillante), transparent);
+    margin: 50px 0;
+}
+
+/* 10. PIE DE PÁGINA ESCOLAR */
+.footer-examen {
+    max-width: 1100px;
+    margin: 50px auto 30px auto;
+    padding: 25px;
+    background-color: var(--negro-tarjeta);
+    border: 1px solid var(--gris-borde);
+    border-top: 3px solid var(--carmin-principal);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.footer-examen p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* 11. RESPONSIVE DESIGN (MÓVILES Y TABLETS) */
+@media (max-width: 768px) {
+    .header-principal {
+        padding: 25px 15px;
+    }
+
+    .ficha-estudiante {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu-navegacion ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-navegacion a {
+        display: block;
+    }
+
+    .bloque-introduccion, .tarjeta-banda, .bloque-comparativo {
+        padding: 25px 18px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
 }
